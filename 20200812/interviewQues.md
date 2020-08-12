@@ -25,8 +25,6 @@
 + 第二次调用：由于第一次没有返回任何值，则默认返回 ```undefined``` 作为此次调用时累加器x的值，所以打印出累加器和当前值： ```undefined``` 和 3
 + 第三次调用：同上述第二次调用，打印出： ```undefined``` 和 4
 
----
-
 ### 2. 输出什么？（考点：箭头函数返回值）
 ```JavaScript
 const getList = ([x,...y]) => [x,y]
@@ -45,8 +43,6 @@ console.log(getUser(user))
 1. ```getList()```方法接收一个数组参数，将 ```list``` 数组作为参数传入，等价于 ```[x,...y] = [1,2,3,4]``` （<font style="color: rgb(227,79,140);">数组解构</font>），即：```x = 1,y = [2,3,4]```。所以，打印出：```[1,[2,3,4]]```
 2. ```getUser()```方法使用箭头函数，将对象变量```user```作为参数传入，创建了对象 ```{ name: 'Lydia', age: 21 }```，但由于**未加圆括号**，没有将此新对象顺利返回。
 
----
-
 ### 3.输出什么？（考点：JS对象）
 ```javaScript
 let person = { name: 'Lydia' }
@@ -58,8 +54,6 @@ console.log(members)
 错误答案：```[{}]```  
 正确答案：```[{ name: 'Lydia' }]```  
 答案解析：```person = null``` 只是释放了变量```person```对内存中对象 ```[{ name: 'Lydia' }]```的引用！！！
-
----
 
 ### 4.输出什么？（考点：```String.raw```）
 ```javascript
@@ -79,8 +73,6 @@ console.log(String.raw`${path}`)  // C:DocumentsProjectsdemo.html
 console.log(String.raw`C:\Documents\Projects\demo.html`)  // C:\Documents\Projects\demo.html
 ```
 
----
-
 ### 5.输出什么？（考点：IIFE）
 ```javascript
 console.log(`${(x => x)('I love')} to program`)
@@ -88,8 +80,6 @@ console.log(`${(x => x)('I love')} to program`)
 错误答案：看不懂 ```${(x => x)('I love')}```  
 正确答案：I love to program  
 答案解析：```${(x => x)('I love')}```是一个立即执行函数表达式（IIFE）！！！
-
----
 
 ### 6.输出是什么？（考点：delete操作符）
 ```javascript
